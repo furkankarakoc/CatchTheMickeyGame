@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         counter = 10
         timeLabel.text = String(counter)
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(counterDown), userInfo: nil, repeats: true)
-        hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(hideMickey), userInfo: nil, repeats: true)
+        hideTimer = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(hideMickey), userInfo: nil, repeats: true)
         hideMickey()
         
        
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         for mickey in mickeyArray {
             mickey.isHidden = true
         }
-        let random = Int(arc4random_uniform(UInt32(mickeyArray.count-1)))
+        let random = Int(arc4random_uniform(UInt32(mickeyArray.count)))
         mickeyArray[random].isHidden = false
     }
     
